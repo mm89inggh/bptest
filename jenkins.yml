@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+  jenkins:
+    image: jenkins/jenkins
+    environment:
+      - JAVA_OPTS=-Duser.timezone=America/Guayaquil
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    networks:
+      bp-net:
+    dns:
+      - 8.8.8.8
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints: [node.role == manager]
+networks:
+  bp-net:
+    external: true
+volumes:
+  jenkins_home:
+
+  
