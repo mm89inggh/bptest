@@ -34,7 +34,7 @@ pipeline {
 		}
             }
             steps {
-		   sh echo 'Generando imagen'	
+		   echo 'Generando imagen'	
 		}
         }	
     }
