@@ -33,7 +33,7 @@ Verificamos que portainer este activo en el browser con la ip del manager y el p
 Integración continua (Preparando ambiente)
 ---------------------
   
-Instalamos a jenkins para en el nodo manager(esto para efectos de prueba)
+Instalamos a jenkins para en el nodo manager(esto para efectos de prueba ya que para conectarse con github se necesita crear un webhook e integrarlo con una ip publica para que github sea activado y ejecutado automaticamente)
   * docker-machine scp jenkins.yml manager:
   * docker-machine ssh manager
   * docker stack deploy -c jenkins.yml jenkins
