@@ -32,10 +32,10 @@ pipeline {
 			filename 'spring-server/Dockerfile'
 			label 'mm89ingdk/devops:1.0.0'
 		}
-		steps {
+            }
+            steps {
 		   sh echo 'Generando imagen'	
 		}
-            }
         }	
     }
 }
