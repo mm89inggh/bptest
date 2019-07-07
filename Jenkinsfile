@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+    	registry = "mm89ingdk/bp-devops"
+    	registryCredential = '82687000-e270-4d1d-a4cb-787a73b93faa'
+    }
     stages {
         stage('Build') {
             agent {
@@ -27,7 +31,11 @@ pipeline {
             }
         }
 	stage('Image') {
-            docker.build("mm89ingdk/devops:1.0.0")
+            steps {
+		script {
+          		docker.build registry + ":$BUILD_NUMBER"
+        	}
+	    }
 	}	
     }
 }
