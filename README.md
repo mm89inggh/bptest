@@ -45,23 +45,10 @@ Al iniciar jenkins se debe copiar el uuid generado al iniciar el mismo
   * docker ps
   * docker exec -it CONTAINER ID cat var/jenkins_home/secrets/initialAdminPassword
   * Copiamos el uuid generado
+  
+No olvidar configurar el pipeline en jenkins con el source de git y el archivo Jenkinsfile
 
 
-Docker Compose
-==============
-![Docker Compose](logo.png?raw=true "Docker Compose Logo")
-
-Compose is a tool for defining and running multi-container Docker applications.
-With Compose, you use a Compose file to configure your application's services.
-Then, using a single command, you create and start all the services
-from your configuration. To learn more about all the features of Compose
-see [the list of features](https://github.com/docker/docker.github.io/blob/master/compose/overview.md#features).
-
-Compose is great for development, testing, and staging environments, as well as
-CI workflows. You can learn more about each case in
-[Common Use Cases](https://github.com/docker/docker.github.io/blob/master/compose/overview.md#common-use-cases).
-
-Using Compose is basically a three-step process.
 
 1. Define your app's environment with a `Dockerfile` so it can be
 reproduced anywhere.
