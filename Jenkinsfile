@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage('Build') {
             agent {
@@ -27,14 +27,7 @@ pipeline {
             }
         }
 	stage('Image') {
-            agent {
-                dockerfile { 
-			filename 'spring-server/Dockerfile'
-		}
-            }
-            steps {
-		   echo 'Generando imagen'	
-		}
-        }	
+            docker.build("mm89ingdk/devops:1.0.0")
+	}	
     }
 }
