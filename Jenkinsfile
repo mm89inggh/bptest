@@ -33,9 +33,11 @@ pipeline {
 	stage('Image') {
             steps {
 		script {
-          		docker.build(registry + ":$BUILD_NUMBER", "-f spring-server/Dockerfile .")
+          		def image docker.build(registry + ":$BUILD_NUMBER", "-f spring-server/Dockerfile .")
+			image.push()
         	}
 	    }
-	}	
+	}
+		
     }
 }
