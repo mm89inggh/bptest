@@ -33,7 +33,7 @@ pipeline {
 	stage('Image') {
             steps {
 		script {
-          		docker.build -f spring-server registry + ":$BUILD_NUMBER"
+          		docker.build -f spring-server/Dockerfile registry + ":$BUILD_NUMBER"
         	}
 	    }
 	}	
