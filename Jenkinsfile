@@ -25,6 +25,14 @@ pipeline {
                     junit 'spring-server/target/surefire-reports/*.xml'
                 }
             }
+        }
+	stage('Image') {
+            agent {
+                dockerfile { 
+			filename 'spring-server/Dockerfile'
+			label 'mm89ingdk/devops:1.0.0'
+		}
+            }
         }	
     }
 }
