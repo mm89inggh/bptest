@@ -34,7 +34,9 @@ pipeline {
             steps {
 		script {
           		def image = docker.build(registry + ":$BUILD_NUMBER", "-f spring-server/Dockerfile .")
-			image.push()
+			docker.withRegistry( '', registryCredential ) {
+				image.push()
+		        }
         	}
 	    }
 	}
