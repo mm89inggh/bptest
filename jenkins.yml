@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   jenkins:
-    image: jenkins/jenkins
+    image: jenkinsci/blueocean
     environment:
       - JAVA_OPTS=-Duser.timezone=America/Guayaquil
     volumes:
