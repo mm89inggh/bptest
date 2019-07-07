@@ -1,22 +1,14 @@
 pipeline {
     agent none
     stages {
-        stage('Back-end') {
+        stage('Build') {
             agent {
                 docker { 
 			image 'maven:3-alpine' 
 		}
             }
             steps {
-                sh 'mvn --version'
-            }
-        }
-        stage('Front-end') {
-            agent {
-                docker { image 'node:7-alpine' }
-            }
-            steps {
-                sh 'node --version'
+                sh 'mvn -B -DskipTests -f spring-server clean package'
             }
         }
     }
