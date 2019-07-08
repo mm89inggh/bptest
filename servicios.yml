@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  devops:
+    image: mm89ingdk/bp-devops:1.0.0
+    ports:
+      - "80:8080"
+    networks:
+      bp-net:
+    deploy:
+      mode: replicated
+      replicas: 2
+      placement:
+        constraints: [node.role == worker]
+networks:
+  bp-net:
+    external: true
+

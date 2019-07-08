@@ -1,0 +1,17 @@
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/config/JacksonConfiguration.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/api/ApiOriginFilter.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/service/MessageService.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/model/Message.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/Swagger2SpringBoot.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/api/NotFoundException.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/config/HomeController.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/RFC3339DateFormat.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/api/ApiException.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/config/CustomInstantDeserializer.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/config/SwaggerDocumentationConfig.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/model/ModelApiResponse.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/api/MessageApiController.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/exception/ServiciosExceptionHandler.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/api/MessageApi.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/service/MessageServiceImpl.java
+/home/marco/Documentos/Proyectos/BP/spring-server/src/main/java/ec/bp/devops/api/ApiResponseMessage.java
