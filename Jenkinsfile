@@ -41,6 +41,13 @@ pipeline {
         	}
 	    }
 	}
+	stage('Deploy') {
+            steps {
+		script {
+          		sh 'docker service update --image mm89ingdk/bp-devops:1.0.0 servicios_devops'
+        	}
+	    }
+	}
 		
     }
 }
