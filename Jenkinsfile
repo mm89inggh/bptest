@@ -3,6 +3,7 @@ pipeline {
     environment {
     	registry = "mm89ingdk/bp-devops"
     	registryCredential = '82687000-e270-4d1d-a4cb-787a73b93faa'
+	version = "1.0.0"
     }
     stages {
         stage('Build') {
@@ -33,7 +34,7 @@ pipeline {
 	stage('Image') {
             steps {
 		script {
-          		def image = docker.build(registry + ":$BUILD_NUMBER", "-f spring-server/Dockerfile .")
+          		def image = docker.build(registry + ":$version", "-f spring-server/Dockerfile .")
 			docker.withRegistry( '', registryCredential ) {
 				image.push()
 		        }
